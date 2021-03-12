@@ -9,6 +9,5 @@ public class SensorTester {
         System.out.println("Fra TS:"+ts.getValue()+" og fra Spo2:"+spO2sensor.getValue());
 
         //Test fra Mia 2
-        Hej fra Caroline
     }
 }
