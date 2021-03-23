@@ -1,6 +1,6 @@
 package org.example.Sensors;
 
-public interface SensorInterface {
+public interface SimulatorTemperatur {
     double getValue();
 
 }
