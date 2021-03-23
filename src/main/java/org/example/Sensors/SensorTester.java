@@ -10,5 +10,6 @@ public class SensorTester {
         System.out.println("virker dette?? 23/3");
         //Test fra Mia 2 og 3
         //Emilie was here
+        //Halløjsa
     }
 }
