@@ -10,7 +10,7 @@ public class Temperaturesensor extends Sensor{
 
     @Override
     public double getValue(){
-        value = 70.0;
+       double value = 70.0;
 
         return value;
     }

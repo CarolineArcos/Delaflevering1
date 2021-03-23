@@ -7,7 +7,7 @@ public abstract class Sensor {
     private String portname;
 
     public double getValue() {
-        value =0.5;
+        value = 0.5;
         System.out.println("value is:"+value);
         return value;
     }
