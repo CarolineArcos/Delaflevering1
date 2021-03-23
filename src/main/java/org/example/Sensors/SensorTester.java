@@ -10,5 +10,6 @@ public class SensorTester {
 
         //Test fra Mia 2 og 3
         //Emilie was here
+        //Halløjsa
     }
 }
