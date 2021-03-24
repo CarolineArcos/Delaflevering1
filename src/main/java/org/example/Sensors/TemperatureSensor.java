@@ -1,20 +1,22 @@
 package org.example.Sensors;
 
-public class TemperatureSensor extends Sensor{
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+
+public class TemperatureSensor extends Sensor {
 
 
-    public TemperatureSensor(){
+    public TemperatureSensor() {
         System.out.println("Temp. sensor established");
 
     }
 
     @Override
-    public double getValue(){
-       value = (40 - (Math.random() * 5));
-
+    public double getValue() {
+        value = ((40.0 - (Math.random() * 5.0)) * 100);
+        value = value / 100;
         return value;
     }
-
 
 
 }
