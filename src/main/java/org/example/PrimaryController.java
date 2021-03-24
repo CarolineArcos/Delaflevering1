@@ -7,34 +7,32 @@ import org.example.Sensors.HRSensor;
 import org.example.Sensors.SpO2sensor;
 import org.example.Sensors.TemperatureSensor;
 
+import static java.lang.Thread.*;
+
 public class PrimaryController {
 
-    @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
-    }
+
 
     TemperatureSensor ts = new TemperatureSensor();
     SpO2sensor spO2sensor= new SpO2sensor();
     HRSensor hrSensor = new HRSensor();
-    Thread Opdatering = new Thread();
+
+
 
     @FXML
-    Label label;
+    Label dataTemp;
+    public Label dataHR;
+    public Label dataSpO2;
 
-    boolean start = false;
 
 
     @FXML
     private synchronized void startSensors(){
-        start = !start;
+
+            dataTemp.setText("" + ts.getValue());
+            dataHR.setText(hrSensor.getValue() + "");
+            dataSpO2.setText("" + spO2sensor.getValue());
 
 
-            label.setText("Temperatur: " + ts.getValue() + " C");
-
-
-
-
-
-    }
+        }
 }

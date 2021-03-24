@@ -4,35 +4,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
+<AnchorPane prefHeight="405.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
    <children>
-      <TitledPane prefHeight="200.0" prefWidth="200.0">
-         <content>
-            <Button mnemonicParsing="false" text="Tryk på mig!" />
-         </content></TitledPane>
-      <Accordion>
-        <panes>
-          <TitledPane animated="false" text="untitled 1">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="untitled 2">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="untitled 3">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-        </panes>
-      </Accordion>
-      <Label fx:id = "label" text="Primary View" />
-      <Button fx:id="primaryButton" onAction="#startSensors" text="Start måling" />
+      <Label layoutX="334.0" layoutY="50.0" text="SpO2" />
+      <Label fx:id="dataSpO2" layoutX="380.0" layoutY="50.0" prefHeight="17.0" prefWidth="29.0" text="-- " />
+      <Label fx:id="dataHR" layoutX="380.0" layoutY="82.0" prefHeight="17.0" prefWidth="29.0" text="-- " textAlignment="RIGHT" />
+      <Label layoutX="338.0" layoutY="82.0" text="Puls" />
+      <Label layoutX="423.0" layoutY="50.0" text="\%" />
+      <Label layoutX="424.0" layoutY="82.0" text="BPM" />
+      <Label layoutX="300.0" layoutY="115.0" prefHeight="17.0" prefWidth="65.0" text="Temperatur" textAlignment="RIGHT" />
+      <Label fx:id="dataTemp" layoutX="380.0" layoutY="115.0" prefHeight="17.0" prefWidth="29.0" text="-- " textAlignment="RIGHT" />
+      <Label layoutX="424.0" layoutY="115.0" text="C" />
+      <Button fx:id="startMåling" layoutX="26.0" layoutY="86.0" onAction="#startSensors" text="Start måling" />
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
    </padding>
-</VBox>
+</AnchorPane>
