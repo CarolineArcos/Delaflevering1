@@ -1,13 +1,16 @@
 package org.example;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import org.example.Sensors.HRSensor;
 import org.example.Sensors.SpO2sensor;
 import org.example.Sensors.TemperatureSensor;
 
+import java.io.IOException;
 
-public class PrimaryController {
+
+public class NyMålingController {
 
 
     TemperatureSensor ts = new TemperatureSensor();
@@ -17,8 +20,12 @@ public class PrimaryController {
 
     @FXML
     Label dataTemp;
-    public Label dataHR;
-    public Label dataSpO2;
+    @FXML
+    Label dataHR;
+    @FXML
+    Label dataSpO2;
+
+
 
 
     @FXML
@@ -31,4 +38,17 @@ public class PrimaryController {
 
 
     }
+    @FXML
+    private void switchToNyMåling() throws IOException {
+        App.setRoot("nyMåling");
+    }
+    @FXML
+    private void switchToResults() throws IOException {
+        App.setRoot("results");
+    }
+    @FXML
+    private void switchToHome() throws IOException {
+        App.setRoot("home");
+    }
+
 }
