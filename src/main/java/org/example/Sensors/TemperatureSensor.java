@@ -10,7 +10,7 @@ public class TemperatureSensor extends Sensor{
 
     @Override
     public double getValue(){
-       value = 70.0;
+       value = (40 - (Math.random() * 5));
 
         return value;
     }
