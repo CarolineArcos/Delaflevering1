@@ -1,16 +1,16 @@
 package org.example.Sensors;
 
-public class Temperaturesensor extends Sensor{
+public class TemperatureSensor extends Sensor{
 
 
-    public Temperaturesensor(){
+    public TemperatureSensor(){
         System.out.println("Temp. sensor established");
 
     }
 
     @Override
     public double getValue(){
-       double value = 70.0;
+       value = 70.0;
 
         return value;
     }
