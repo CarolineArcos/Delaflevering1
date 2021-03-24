@@ -7,7 +7,8 @@ public class HRSensor extends Sensor {
 
         value = Math.round(110.1 - (Math.random() * 60));
 
-        // tal mellem 110 og 50 afrundet til 1 decimal
+        // tal mellem 110 og 50 afrundet
+
         return value;
 
     }
