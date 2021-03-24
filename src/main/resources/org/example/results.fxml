@@ -14,7 +14,7 @@
                 <Button fx:id="buttonResultater" layoutX="59.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchToResults" text="Resultater" />
             </items>
         </ToolBar>
-        <Button fx:id="buttonLogUd" layoutX="468.0" layoutY="17.0" mnemonicParsing="false" text="Log Ud" />
+        <Button fx:id="buttonLogUd" layoutX="468.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchToLogIn" text="Log Ud" />
       <TableView layoutX="281.0" layoutY="141.0" prefHeight="200.0" prefWidth="200.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />

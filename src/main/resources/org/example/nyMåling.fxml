@@ -14,7 +14,7 @@
             <Button fx:id="buttonResultater" layoutX="59.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchToResults" text="Resultater" />
         </items>
       </ToolBar>
-      <Button fx:id="buttonLogUd" layoutX="468.0" layoutY="17.0" mnemonicParsing="false" text="Log Ud" />
+      <Button fx:id="buttonLogUd" layoutX="468.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchToLogIn" text="Log Ud" />
       <Pane layoutX="211.0" layoutY="154.0" prefHeight="97.0" prefWidth="165.0">
          <children>
               <Label layoutX="39.0" layoutY="14.0" text="SpO2" />

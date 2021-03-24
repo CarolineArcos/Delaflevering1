@@ -18,4 +18,8 @@ public class HomeController {
     private void switchToHome() throws IOException {
         App.setRoot("home");
     }
+    @FXML
+    private void switchToLogIn() throws IOException {
+        App.setRoot("logIn");
+    }
 }
