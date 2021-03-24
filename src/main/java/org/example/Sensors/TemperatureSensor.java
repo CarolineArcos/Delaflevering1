@@ -1,7 +1,5 @@
 package org.example.Sensors;
 
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
 
 public class TemperatureSensor extends Sensor {
 
