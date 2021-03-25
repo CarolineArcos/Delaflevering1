@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="405.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ResultsController">
+    <children>
+
+        <ToolBar layoutX="14.0" layoutY="29.0" prefHeight="40.0" prefWidth="211.0">
+            <items>
+                <Button fx:id="buttonHjem" mnemonicParsing="false" onAction="#switchToHome" text="Hjem" />
+                <Button fx:id="buttonNyMåling" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchToNyMåling" text="Ny måling" />
+                <Button fx:id="buttonResultater" layoutX="59.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchToResults" text="Resultater" />
+            </items>
+        </ToolBar>
+        <Button fx:id="buttonLogUd" layoutX="468.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchToLogIn" text="Log Ud" />
+      <TableView layoutX="281.0" layoutY="141.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Label layoutX="46.0" layoutY="104.0" text="Resultater fra tidligere målinger" />
+       
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</AnchorPane>

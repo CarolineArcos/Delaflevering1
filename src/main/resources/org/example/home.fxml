@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.HomeController">
+    <children>
+    <ToolBar layoutX="14.0" layoutY="29.0" prefHeight="40.0" prefWidth="211.0">
+        <items>
+            <Button fx:id="buttonHjem" mnemonicParsing="false" text="Hjem" />
+            <Button fx:id="buttonNyMåling" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchToNyMåling" text="Ny måling" />
+            <Button fx:id="buttonResultater" layoutX="59.0" layoutY="13.0" mnemonicParsing="false" onAction="#switchToResults" text="Resultater" />
+        </items>
+    </ToolBar>
+    <Button fx:id="buttonLogUd" layoutX="468.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchToLogIn" text="Log Ud" />
+      <Button layoutX="90.0" layoutY="158.0" mnemonicParsing="false" onAction="#switchToNyMåling" prefHeight="90.0" prefWidth="141.0" text="Lav ny måling" />
+      <Button layoutX="329.0" layoutY="158.0" mnemonicParsing="false" onAction="#switchToResults" prefHeight="90.0" prefWidth="141.0" text="se tidligere resultater" />
+    </children>
+
+</AnchorPane>
