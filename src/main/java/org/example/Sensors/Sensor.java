@@ -24,23 +24,19 @@ public abstract class Sensor {
         this.portname = portname;
     }
 
-    public double getUpperLimit() {
-        return upperLimit;
+    public double getMax() { return max; }
+
+    public void setMax(double max) {
+        this.max = max;
     }
 
-    public void setUpperLimit(double upperLimit) {
-        this.upperLimit = upperLimit;
+    public double getMin() { return min; }
+
+    public void setMin(double min) {
+        this.min = min;
     }
 
-    public double getLowerLimit() {
-        return lowerLimit;
-    }
-
-    public void setLowerLimit(double lowerLimit) {
-        this.lowerLimit = lowerLimit;
-    }
-
-    protected double upperLimit,lowerLimit;
+    protected double max, min;
 
     public Sensor(){
 
