@@ -6,7 +6,7 @@ public class PersonStarter {
         Professional Jens=new Doctor("Jens Hansen", "123", "Neurologisk");
 
         System.out.println("Kære" + Solveigh.getNavn());
-
+//Udkommentering
 
     }
 }
