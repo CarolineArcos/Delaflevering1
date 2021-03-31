@@ -1,17 +1,18 @@
 package org.example.Users;
 
 public class Professional {
-    protected String navn;
+    protected String name;
     protected int ID;
     protected int alder;
     protected String afdeling;
+    protected String title;
 
-    public String getNavn() {
-        return navn;
+    public String getName() {
+        return name;
     }
 
-    public void setNavn(String navn) {
-        this.navn = navn;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getID() {
@@ -29,6 +30,7 @@ public class Professional {
     public void setAlder(int alder) {
         this.alder = alder;
     }
+
     public String getAfdeling() {
         return afdeling;
     }
@@ -37,6 +39,9 @@ public class Professional {
         this.afdeling = afdeling;
     }
 
+    public String getTitle(){return title;}
+
+    public void setTitle(String title) {this.title = title;}
 
 }
 

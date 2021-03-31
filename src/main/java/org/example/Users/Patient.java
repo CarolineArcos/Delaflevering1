@@ -1,15 +1,15 @@
-/*package org.example.Users;
+package org.example.Users;
 
 public class Patient extends Person {
 
     private String diagnosis;
-    public Patient(String navn, String CPR, double height, String diagnosis){
-        this.navn = navn;
+    public Patient(String name, String CPR, double height, String diagnosis){
+        this.name = name;
 
-        super.setNavn(navn);
+        super.setName(name);
         super.CPR=CPR;
         this.diagnosis=diagnosis;
-        super.height(height);
+        super.height=height;
     }
 
     public String getDiagnosis(){
@@ -24,4 +24,3 @@ public class Patient extends Person {
 
 
 }
-*/

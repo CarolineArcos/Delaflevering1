@@ -2,7 +2,7 @@ package org.example.Users;
 
 public class Person {
 
-    protected String navn;
+    protected String name;
     protected String CPR;
     protected double height;
 
@@ -13,12 +13,12 @@ public class Person {
     public void setCPR(int CPR) {
     }
 
-    public String getNavn() {
-        return navn;
+    public String getName() {
+        return name;
     }
 
-    public void setNavn(String navn) {
-        this.navn = navn;
+    public void setName(String navn) {
+        this.name = name;
     }
 
     public double getHeight() {
@@ -26,4 +26,7 @@ public class Person {
     }
 
 
-}
+    public void setHeight(double height) {this.height = height; }
+
+    }
+

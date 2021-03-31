@@ -1,14 +1,13 @@
 package org.example.Users;
 
-public class Doctor extends Professional {
-
-    public Doctor(String name, int ID, String afdeling) {
+public class Nurse extends Professional {
+    public Nurse (String name, int ID, String afdeling, String title){
         this.name = name;
 
         super.setName(name);
         super.setID(ID);
         super.setAfdeling(afdeling);
         super.setTitle(title);
-    }
 
+    }
 }
