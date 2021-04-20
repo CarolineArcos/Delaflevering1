@@ -8,6 +8,8 @@ public class main {
         ConnectionSingleton singleton = new ConnectionSingleton();
 
         Connection conn = singleton.connectToSQLite("identifier.sqlite");
+        ConnectionUser cu = new ConnectionUser(conn);
+        cu.InsertInUsers(123456,"Solveigh","password", "patient");
     }
 
 }

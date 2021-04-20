@@ -7,6 +7,7 @@ public class TemperatureSensor extends Sensor {
     public TemperatureSensor() {
         System.out.println("Temp. sensor established");
 
+
     }
 
     @Override

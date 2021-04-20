@@ -3,11 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LogInController">
    <children>
-      <TextField layoutX="213.0" layoutY="148.0" text="brugernavn" />
-      <TextField layoutX="213.0" layoutY="187.0" text="Kodeord" />
+      <TextField fx:id="textUser" layoutX="213.0" layoutY="148.0" text="brugernavn" />
+      <TextField fx:id="textPassword" layoutX="213.0" layoutY="187.0" text="Kodeord" />
       <Button fx:id="buttonLogIn" layoutX="255.0" layoutY="228.0" mnemonicParsing="false" onAction="#switchToHome" text="Log Ind" />
    </children>
 </AnchorPane>
