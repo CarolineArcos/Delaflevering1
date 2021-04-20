@@ -16,7 +16,7 @@ public class main {
         Connection conn = singleton.connectToSQLite("identifier.sqlite");
         ConnectionUser cu = new ConnectionUser(conn);
         //ConnectionMeasurement cm = new ConnectionMeasurement(conn);
-        cu.InsertInUsers(160195,"Mia","password", "patient");
+        cu.InsertInUsers(160194,"Mia","password", "patient");
 
 
     }
