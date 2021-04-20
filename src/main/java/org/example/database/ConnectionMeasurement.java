@@ -1,9 +1,8 @@
 package org.example.database;
-import org.example.Sensors.HRSensor;
-import org.example.Sensors.SpO2sensor;
-import org.example.Sensors.TemperatureSensor;
 
 import java.sql.*;
+import java.util.Calendar;
+
 public class ConnectionMeasurement {
 
     private Connection connection;
@@ -11,10 +10,8 @@ public class ConnectionMeasurement {
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
 
-    TemperatureSensor ts = new TemperatureSensor();
-    SpO2sensor spO2sensor = new SpO2sensor();
-    HRSensor hrSensor = new HRSensor();
-
+    Calendar calendar = Calendar.getInstance();
+    java.sql.Timestamp time = new java.sql.Timestamp(calendar.getTime().getTime());
 
     public ConnectionMeasurement(Connection connection){
         this.connection = connection;
@@ -30,7 +27,7 @@ public class ConnectionMeasurement {
             preparedStatement.setDouble(2, value2);
             preparedStatement.setDouble(3, value3);
             preparedStatement.setInt(4, value4);
-
+            //preparedStatement.setTimestamp(5, time);
             preparedStatement.execute();
 
         }catch (SQLException throwables){
