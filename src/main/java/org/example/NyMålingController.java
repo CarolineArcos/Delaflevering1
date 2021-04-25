@@ -30,8 +30,7 @@ public class NyMålingController {
 
     @FXML
     private synchronized void startSensors() throws InterruptedException {
-        boolean start = true;
-        while (start) {
+
 
 
             dataSpO2.setText("" + spO2sensor.getValue());
@@ -39,7 +38,7 @@ public class NyMålingController {
             dataTemp.setText("" + ts.getValue());
 
 
-        }
+
 
 
     }

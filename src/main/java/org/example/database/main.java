@@ -18,10 +18,11 @@ public class main {
         Connection conn = singleton.connectToSQLite("identifier.sqlite");
         ConnectionUser cu = new ConnectionUser(conn);
         ConnectionMeasurement cm = new ConnectionMeasurement(conn);
-        //cu.InsertInUsers(160195,"Mia","password", "patient");
+        //cu.InsertInUsers(140499,"Emilie","password", "patient");
 
         for (int i=0; i<20;i++) {
-            cm.InsertInMeasurements(160195, ((double) (40.1 - (Math.random() * 5.0))), (double) (100.1 - (Math.random() * 6)), (int) (Math.round(110 - (Math.random() * 60))));
+            cm.InsertInMeasurements(140499, ((double) (40.1 - (Math.random() * 5.0))), (double) (100.1 - (Math.random() * 6)), (int) (Math.round(110 - (Math.random() * 60))));
+
         }
 
     }
