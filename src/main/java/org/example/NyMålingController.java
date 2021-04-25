@@ -29,13 +29,11 @@ public class NyMålingController {
 
 
     @FXML
-    private synchronized void startSensors() {
+    private synchronized void startSensors() throws InterruptedException {
 
-
-        dataSpO2.setText("" + spO2sensor.getValue());
-        dataHR.setText("" + hrSensor.getValue());
-        dataTemp.setText("" + ts.getValue());
-
+            dataSpO2.setText("" + spO2sensor.getValue());
+            dataHR.setText("" + hrSensor.getValue());
+            dataTemp.setText("" + ts.getValue());
 
     }
     @FXML

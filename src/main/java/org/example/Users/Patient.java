@@ -3,13 +3,13 @@ package org.example.Users;
 public class Patient extends Person {
 
     private String diagnosis;
-    public Patient(String name, String CPR, double height, String diagnosis){
-        this.name = name;
+    public Patient(String navn, String CPR, double height, String diagnosis){
+        this.navn = navn;
 
-        super.setName(name);
+        super.setNavn(navn);
         super.CPR=CPR;
         this.diagnosis=diagnosis;
-        super.height=height;
+        super.height(height);
     }
 
     public String getDiagnosis(){
