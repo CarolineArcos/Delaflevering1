@@ -21,7 +21,9 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Label layoutX="46.0" layoutY="104.0" text="Resultater fra tidligere målinger" />
+      <Label layoutX="24.0" layoutY="141.0" text="Resultater fra tidligere målinger" />
+      <Label layoutX="24.0" layoutY="86.0" prefHeight="17.0" prefWidth="36.0" text="CPR:" />
+      <TextField fx:id="CPR" layoutX="53.0" layoutY="82.0" />
        
     </children>
     <padding>

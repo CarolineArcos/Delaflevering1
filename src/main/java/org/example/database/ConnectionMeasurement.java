@@ -10,8 +10,7 @@ public class ConnectionMeasurement {
     private PreparedStatement preparedStatement;
     private ResultSet resultSet;
 
-    Calendar calendar = Calendar.getInstance();
-    java.sql.Timestamp time = new java.sql.Timestamp(calendar.getTime().getTime());
+
 
     public ConnectionMeasurement(Connection connection){
         this.connection = connection;
@@ -27,7 +26,6 @@ public class ConnectionMeasurement {
             preparedStatement.setDouble(2, value2);
             preparedStatement.setDouble(3, value3);
             preparedStatement.setInt(4, value4);
-            //preparedStatement.setTimestamp(5, time);
             preparedStatement.execute();
 
         }catch (SQLException throwables){
