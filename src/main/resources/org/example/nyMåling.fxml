@@ -24,7 +24,7 @@
               <Label layoutX="115.0" layoutY="14.0" text="\%" />
               <Label layoutX="114.0" layoutY="40.0" text="BPM" />
               <Label layoutX="7.0" layoutY="66.0" prefHeight="17.0" prefWidth="65.0" text="Temperatur" textAlignment="RIGHT" />
-              <Label fx:id="dataTemp" layoutX="76.0" layoutY="66.0" prefHeight="17.0" prefWidth="36.0" text="-- " textAlignment="RIGHT" />
+              <Label fx:id="dataTemp" layoutX="76.0" layoutY="66.0" prefHeight="17.0" prefWidth="45.0" text="-- " textAlignment="RIGHT" />
               <Label layoutX="116.0" layoutY="66.0" text="C" />
          </children>
       </Pane>

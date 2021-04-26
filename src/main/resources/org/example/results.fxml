@@ -15,16 +15,19 @@
             </items>
         </ToolBar>
         <Button fx:id="buttonLogUd" layoutX="468.0" layoutY="17.0" mnemonicParsing="false" onAction="#switchToLogIn" text="Log Ud" />
-      <TableView layoutX="281.0" layoutY="141.0" prefHeight="200.0" prefWidth="200.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
-      </TableView>
-      <Label layoutX="24.0" layoutY="141.0" text="Resultater fra tidligere målinger" />
-      <Label layoutX="24.0" layoutY="86.0" prefHeight="17.0" prefWidth="36.0" text="CPR:" />
-      <TextField fx:id="CPR" layoutX="53.0" layoutY="82.0" />
-       
+        <TableView fx:id="table" layoutX="133.0" layoutY="160.0" prefHeight="200.0" prefWidth="374.0">
+            <columns>
+                <TableColumn fx:id="Col_time" prefWidth="127.33331298828125" text="Time" />
+                <TableColumn fx:id="Col_temp" prefWidth="81.0" text="Temperatur" />
+                <TableColumn fx:id="Col_spo2" prefWidth="86.66665649414062" text="SpO2" />
+                <TableColumn fx:id="Col_hr" prefWidth="78.0" text="Puls" />
+            </columns>
+        </TableView>
+        <Label layoutX="24.0" layoutY="130.0" text="Resultater fra tidligere målinger" />
+        <Label layoutX="24.0" layoutY="86.0" prefHeight="17.0" prefWidth="36.0" text="CPR:" />
+        <TextField fx:id="CPR" layoutX="53.0" layoutY="82.0" />
+      <Button fx:id="bttonVisData" layoutX="226.0" layoutY="82.0" mnemonicParsing="false" onAction="#visData" text="Vis data" />
+
     </children>
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
