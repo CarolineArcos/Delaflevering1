@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="405.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.NyMålingController">
     <children>
-        <Button fx:id="startMåling" layoutX="26.0" layoutY="86.0" onAction="#startSensors" text="Start måling" />
+        <Button fx:id="startMåling" layoutX="233.0" layoutY="86.0" onAction="#startSensors" text="Start måling" />
       <ToolBar layoutX="14.0" layoutY="29.0" prefHeight="40.0" prefWidth="211.0">
         <items>
           <Button fx:id="buttonHjem" mnemonicParsing="false" onAction="#switchToHome" text="Hjem" />
@@ -28,9 +28,9 @@
               <Label layoutX="116.0" layoutY="66.0" text="C" />
          </children>
       </Pane>
-      <Label layoutX="26.0" layoutY="127.0" text="CPR:" />
-      <TextField fx:id="CPR" layoutX="67.0" layoutY="123.0" />
-      <Button layoutX="116.0" layoutY="86.0" mnemonicParsing="false" onAction="#stop" text="Stop" />
+      <Label layoutX="33.0" layoutY="90.0" text="CPR:" />
+      <TextField fx:id="CPR" layoutX="69.0" layoutY="86.0" />
+      <Button layoutX="324.0" layoutY="86.0" mnemonicParsing="false" onAction="#stop" text="Stop" />
       
     </children>
     <padding>
