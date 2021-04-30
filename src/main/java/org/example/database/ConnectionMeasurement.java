@@ -15,7 +15,7 @@ public class ConnectionMeasurement {
         this.connection = connection;
     }
 
-    public void InsertInMeasurements(int value1, double value2, double value3, int value4) {
+    public void InsertInMeasurements(int value1, double value2, double value3, double value4) {
 
 
         String SQLMeasurements = "INSERT INTO measurements (cpr, temperature, spO2, heartrate) VALUES (?,?,?,?);";
