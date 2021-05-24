@@ -58,9 +58,8 @@ public class NyMålingController {
                                 dataSpO2.setText("" + spo2);
                                 dataHR.setText("" + hr);
                                 dataTemp.setText("" + temp);
-                                int CPRtal = Integer.parseInt(CPR.getText());
-                                int hrTal = (int) hr;
-                                cm.InsertInMeasurements(CPRtal, temp, spo2, hrTal);
+                                int cprTal = Integer.parseInt(CPR.getText());
+                                cm.InsertInMeasurements(cprTal, temp, spo2, hr);
                             }
                     ), 0, 3, TimeUnit.SECONDS);
         }
