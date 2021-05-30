@@ -7,7 +7,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 
 import java.util.ArrayList;
 
-public class measurementObjects {
+public class MeasurementObjects {
 
     /*private int CPRid;
     private ArrayList<Double> cpr,temp,spO2,hr;
@@ -18,7 +18,7 @@ public class measurementObjects {
         this.cpr = cpr;
     }*/
 
-    public measurementObjects(int cpr, Double temperature, Double sp02, Double heartrate) {
+    public MeasurementObjects(int cpr, Double temperature, Double sp02, Double heartrate) {
         this.Cpr = cpr;
         this.temperature = temperature;
         this.spO2 = sp02;

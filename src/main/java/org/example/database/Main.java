@@ -7,7 +7,7 @@ import org.example.Sensors.TemperatureSensor;
 import java.sql.Connection;
 import java.util.ArrayList;
 
-public class main {
+public class Main {
 
     TemperatureSensor ts = new TemperatureSensor();
     SpO2sensor spO2sensor = new SpO2sensor();
@@ -27,8 +27,8 @@ public class main {
         }*/
 
 
-        ArrayList<measurementObjects> result = cm.FindAllMeasurementResultsByCPR(140499);
-        for (measurementObjects r:result) {
+        ArrayList<MeasurementObjects> result = cm.FindAllMeasurementResultsByCPR(140499);
+        for (MeasurementObjects r:result) {
             System.out.println(r.getHeartrate());
         }
 
@@ -45,4 +45,5 @@ public class main {
 
     }*/
 
-    }}
+    }
+}

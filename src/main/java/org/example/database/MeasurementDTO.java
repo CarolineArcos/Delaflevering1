@@ -32,8 +32,8 @@ public class MeasurementDTO {
         }
     }
 
-    public ArrayList<measurementObjects> FindAllMeasurementResultsByCPR (int cprTal) {
-        ArrayList<measurementObjects> liste = new ArrayList<>();
+    public ArrayList<MeasurementObjects> FindAllMeasurementResultsByCPR (int cprTal) {
+        ArrayList<MeasurementObjects> liste = new ArrayList<>();
 
         String SQLResults = "SELECT temperature, spO2, heartrate, time FROM measurements WHERE cpr = " + cprTal + ";";
         try {
@@ -41,7 +41,7 @@ public class MeasurementDTO {
             resultSet = statement.executeQuery(SQLResults);
 
             while (resultSet.next()) {
-                liste.add(new measurementObjects(cprTal, resultSet.getDouble("temperature"), resultSet.getDouble("spO2"), resultSet.getDouble("heartrate")));
+                liste.add(new MeasurementObjects(cprTal, resultSet.getDouble("temperature"), resultSet.getDouble("spO2"), resultSet.getDouble("heartrate")));
             }
 
 
