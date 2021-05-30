@@ -29,7 +29,7 @@ public class main {
 
         ArrayList<measurementObjects> result = cm.FindAllMeasurementResultsByCPR(140499);
         for (measurementObjects r:result) {
-            System.out.println(r.getSpO2());
+            System.out.println(r.getHeartrate());
         }
 
 
