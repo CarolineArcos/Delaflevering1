@@ -18,56 +18,49 @@ public class measurementObjects {
         this.cpr = cpr;
     }*/
 
-    private int Cpr;
-    private ArrayList<Double> cpr,temperature,spO2,heartrate;
-
-    public ArrayList<Double> getCpr() {
-        return cpr;
-    }
-
-    public void setCpr(ArrayList<Double> values1) {
-        this.cpr = cpr;
-    }
-
-    public ArrayList<Double> getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(ArrayList<Double> values2) {
+    public measurementObjects(int cpr, Double temperature, Double sp02, Double heartrate) {
+        this.Cpr = cpr;
         this.temperature = temperature;
-    }
-
-    public ArrayList<Double> getSpO2() {
-        return spO2;
-    }
-
-    public void setSpO2(ArrayList<Double> spO2) {
-        this.spO2 = spO2;
-    }
-
-    public ArrayList<Double> getHeartrate() {
-        return heartrate;
-    }
-
-    public void setHeartrate(ArrayList<Double> heartrate) {
+        this.spO2 = sp02;
         this.heartrate = heartrate;
     }
 
-    public int getCPR() {
+    private int Cpr;
+    private Double temperature,spO2,heartrate;
+
+    public int getCpr() {
         return Cpr;
     }
 
-    public void setCPR(int cpr) {
+    public Double getTemperature() {
+        return temperature;
+    }
+
+    public void setTemperature(Double temperature) {
+        this.temperature = temperature;
+    }
+
+    public Double getSpO2() {
+        return spO2;
+    }
+
+    public void setSpO2(Double spO2) {
+        this.spO2 = spO2;
+    }
+
+    public Double getHeartrate() {
+        return heartrate;
+    }
+
+    public void setHeartrate(Double heartrate) {
+        this.heartrate = heartrate;
+    }
+
+    public void setCpr(int cpr) {
         Cpr = cpr;
     }
 
-
-
-
-
-
-
-    /*private IntegerProperty cprProperty;
+/*private IntegerProperty cprProperty;
 
     private DoubleProperty tempProperty;
 

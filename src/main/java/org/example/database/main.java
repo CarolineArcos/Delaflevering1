@@ -5,6 +5,7 @@ import org.example.Sensors.SpO2sensor;
 import org.example.Sensors.TemperatureSensor;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 
 public class main {
 
@@ -17,7 +18,7 @@ public class main {
 
         Connection conn = singleton.connectToSQLite("identifier.sqlite");
         ConnectionUser cu = new ConnectionUser(conn);
-        ConnectionMeasurement cm = new ConnectionMeasurement(conn);
+        MeasurementDTO cm = new MeasurementDTO(conn);
         //cu.InsertInUsers(140499,"Emilie","password", "patient");
 
        /* for (int i = 0; i < 20; i++) {
@@ -26,8 +27,9 @@ public class main {
         }*/
 
 
-        for (int i = 0; i < 100; i++) {
-            cm.FindAllMeasurementResults(123456);
+        ArrayList<measurementObjects> result = cm.FindAllMeasurementResultsByCPR(140499);
+        for (measurementObjects r:result) {
+            System.out.println(r.getSpO2());
         }
 
 

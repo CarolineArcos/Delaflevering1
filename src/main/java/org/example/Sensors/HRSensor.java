@@ -1,6 +1,7 @@
 package org.example.Sensors;
 
-public class HRSensor extends Sensor {
+ // public class HRSensor extends Sensor {
+public class HRSensor extends Sensor{
 
     @Override
     public double getValue() {

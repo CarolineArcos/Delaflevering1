@@ -13,7 +13,7 @@ public class TemperatureSensor extends Sensor {
     @Override
     public double getValue() {
 
-        value = (40.1 - (Math.random() * 5.0));
+        value = (42.1 - (Math.random() * 7.0));
 
         // tal mellem 40 og 35 afrundet til 2 decimaler
         return value;

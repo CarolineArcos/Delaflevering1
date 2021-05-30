@@ -18,10 +18,6 @@ public class ResultsController {
     private void visData() throws InterruptedException {
         int CPRtal = Integer.parseInt(CPR.getText());
 
-
-
-
-
     }
 
     @FXML

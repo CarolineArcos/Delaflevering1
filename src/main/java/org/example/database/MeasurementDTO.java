@@ -3,7 +3,7 @@ package org.example.database;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class ConnectionMeasurement {
+public class MeasurementDTO {
 
     private Connection connection;
     private Statement statement;
@@ -11,7 +11,7 @@ public class ConnectionMeasurement {
     private ResultSet resultSet;
 
 
-    public ConnectionMeasurement(Connection connection) {
+    public MeasurementDTO(Connection connection) {
         this.connection = connection;
     }
 
@@ -32,9 +32,8 @@ public class ConnectionMeasurement {
         }
     }
 
-    public ArrayList<measurementObjects> FindAllMeasurementResults (int cprTal) {
-        measurementObjects msObject = new measurementObjects();
-        ArrayList liste = new ArrayList();
+    public ArrayList<measurementObjects> FindAllMeasurementResultsByCPR (int cprTal) {
+        ArrayList<measurementObjects> liste = new ArrayList<>();
 
         String SQLResults = "SELECT temperature, spO2, heartrate, time FROM measurements WHERE cpr = " + cprTal + ";";
         try {
@@ -42,12 +41,7 @@ public class ConnectionMeasurement {
             resultSet = statement.executeQuery(SQLResults);
 
             while (resultSet.next()) {
-                System.out.println(
-               "temp" + resultSet.getDouble("temperature") + "\n" +
-                "spo2"+resultSet.getDouble("spO2")+ "\n" +
-                "hr"+resultSet.getDouble("heartrate")+ "\n" +
-                "tid"+resultSet.getTimestamp("time")+ "\n"
-                );
+                liste.add(new measurementObjects(cprTal, resultSet.getDouble("temperature"), resultSet.getDouble("spO2"), resultSet.getDouble("heartrate")));
             }
 
 

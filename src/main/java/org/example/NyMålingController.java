@@ -6,10 +6,9 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.example.Sensors.HRSensor;
-import org.example.Sensors.SpO2sensor;
-import org.example.Sensors.TemperatureSensor;
-import org.example.database.ConnectionMeasurement;
+import javafx.scene.paint.Color;
+import org.example.Sensors.*;
+import org.example.database.MeasurementDTO;
 import org.example.database.ConnectionSingleton;
 import org.example.database.ConnectionUser;
 
@@ -21,9 +20,9 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 
-public class NyMålingController {
+public class NyMålingController implements SensorObservable {
 
-
+    public SensorObserver sensorObserver;
     public TextField CPR;
     ScheduledExecutorService event;
     boolean control = true;
@@ -33,7 +32,7 @@ public class NyMålingController {
 
     ConnectionSingleton singleton = new ConnectionSingleton();
     Connection conn = singleton.connectToSQLite("identifier.sqlite");
-    ConnectionMeasurement cm = new ConnectionMeasurement(conn);
+    MeasurementDTO cm = new MeasurementDTO(conn);
 
 
     @FXML
@@ -55,11 +54,19 @@ public class NyMålingController {
                                 double hr = hrSensor.getValue();
                                 double temp = ts.getValue();
 
+                                if (temp > 40) {
+                                    dataTemp.setTextFill(Color.RED);
+                                } else {
+                                    dataTemp.setTextFill(Color.GREEN);
+                                }
+
                                 dataSpO2.setText("" + spo2);
                                 dataHR.setText("" + hr);
                                 dataTemp.setText("" + temp);
-                                int cprTal = Integer.parseInt(CPR.getText());
-                                cm.InsertInMeasurements(cprTal, temp, spo2, hr);
+                                if (!CPR.getText().equals("")) {
+                                    int cprTal = Integer.parseInt(CPR.getText());
+                                    cm.InsertInMeasurements(cprTal, temp, spo2, hr);
+                                }
                             }
                     ), 0, 3, TimeUnit.SECONDS);
         }
@@ -104,5 +111,15 @@ public class NyMålingController {
     public void stop(ActionEvent actionEvent) {
         event.shutdown();
         control = true;
+    }
+
+    @Override
+    public void register(SensorObserver sensorObserver) {
+        this.sensorObserver = sensorObserver;
+    }
+
+    @Override
+    public void run() {
+
     }
 }
